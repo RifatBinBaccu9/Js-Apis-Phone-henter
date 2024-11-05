@@ -11,6 +11,14 @@ console.log(addCardData);
 const pushData= document.getElementById('card-data');
 pushData.innerText='';
 
+if(addCardData.length > 12){
+  const btnShow= document.getElementById('show-all');
+  btnShow.classList.remove('hidden');
+}else{
+  const btnRemove= document.getElementById('show-all');
+  btnRemove.classList.add('hidden');
+}
+
 addCardData = addCardData.slice(0,12);
 
 addCardData.forEach(element => {
