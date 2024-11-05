@@ -34,7 +34,7 @@ addCardData.forEach((element) => {
     <h2 class="card-title">${element.phone_name}</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary" onclick="showDetails('${element.slug}'); show_modal_add.showModal()">Buy Now</button>
+      <button class="btn btn-primary" onclick="showDetails('${element.slug}'); show_modal_add.showModal()">Show Details</button>
     </div>
 </div>`;
 pushData.appendChild(createDiv);
