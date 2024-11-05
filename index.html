@@ -8,17 +8,18 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main>
-        <section>
+    <main >
+        <h1 class="text-center pt-[50px] text-4xl font-extrabold">Phone Henter</h1>
+        <section class="mb-[60px] mt-[20px] text-center">
             <input id="searchSection" type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
             <button onclick="btnClick()" class="btn btn-active btn-accent">Search</button>
         </section>
 
-        <section id="card-data" class="grid grid-cols-3 gap-2">
+        <section id="card-data" class="grid grid-cols-3 gap-3 m-[40px]">
         </section>
 
-        <section>
-            <button class="btn btn-accent">Show All</button>
+        <section id="show-all" class="text-center mb-[40px] hidden">
+            <button  class="btn btn-accent">Show All</button>
         </section>
 
     </main>

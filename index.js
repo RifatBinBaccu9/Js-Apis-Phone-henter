@@ -10,6 +10,9 @@ console.log(addCardData);
 
 const pushData= document.getElementById('card-data');
 pushData.innerText='';
+
+addCardData = addCardData.slice(0,12);
+
 addCardData.forEach(element => {
     const createDiv=document.createElement('div');
     createDiv.classList=`card card-compact bg-base-100 w-96 shadow-xl`;
