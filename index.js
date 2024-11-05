@@ -6,17 +6,15 @@ const phoneHunter= async (searchPhone) => {
 }
 
 const cards = addCardData => {
-console.log(addCardData);
 
 const pushData= document.getElementById('card-data');
 pushData.innerText='';
 
+const btnShowRemove= document.getElementById('show-all');
 if(addCardData.length > 12){
-  const btnShow= document.getElementById('show-all');
-  btnShow.classList.remove('hidden');
+  btnShowRemove.classList.remove('hidden');
 }else{
-  const btnRemove= document.getElementById('show-all');
-  btnRemove.classList.add('hidden');
+  btnShowRemove.classList.add('hidden');
 }
 
 addCardData = addCardData.slice(0,12);
@@ -39,10 +37,22 @@ addCardData.forEach(element => {
 </div>`;
 pushData.appendChild(createDiv);
 });
+
+loaderSpenr(false);
 }
 
 const btnClick = search => {
+  loaderSpenr(true);
 const searchInput=document.getElementById('searchSection');
 const searchValue=searchInput.value;
 phoneHunter(searchValue);
+}
+
+const loaderSpenr= loader =>{
+  const loaderHiddenAdd=document.getElementById('loading-spinners');
+  if(loader){
+    loaderHiddenAdd.classList.remove('hidden');
+  }else{
+    loaderHiddenAdd.classList.add('hidden');
+  }
 }
